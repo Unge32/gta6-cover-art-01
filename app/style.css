@@ -1,0 +1,27 @@
+html, body { margin: 0; min-height: 100%; background: #160a2e; color: #f5eefc; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 12px; width: 320px; flex-shrink: 0; background: #221040; border: 1px solid #4a2a7a; border-radius: 14px; padding: 20px; box-sizing: border-box; }
+.controls h1 { margin: 0; font-size: 30px; line-height: 1.05; letter-spacing: 0.5px; text-transform: uppercase; color: #ffe259; text-shadow: 0 0 18px rgba(255, 94, 122, 0.8); }
+.tagline { margin: 0; color: #cfb8ec; }
+.field { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 13px; }
+.field input[type=text], .field select { font: inherit; padding: 8px 10px; border: 1px solid #6b4a9e; border-radius: 8px; background: #160a2e; color: #fff; }
+.field input[type=range] { width: 100%; accent-color: #ff5e7a; }
+.slots { margin: 0; font-size: 12px; color: #cfb8ec; }
+fieldset { border: 1px solid #4a2a7a; border-radius: 10px; padding: 10px; margin: 0; }
+legend { font-weight: 700; font-size: 13px; padding: 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 13px; font-weight: 600; padding: 6px 10px; border: 1px solid #6b4a9e; border-radius: 999px; background: transparent; color: #e9dcff; cursor: pointer; }
+.chip.active { background: #ff5e7a; border-color: #ff5e7a; color: #fff; }
+button { font: inherit; font-weight: 700; padding: 11px 14px; border: 0; border-radius: 8px; background: #ff5e7a; color: #fff; cursor: pointer; }
+button.ghost { background: transparent; border: 1px solid #6b4a9e; color: #e9dcff; }
+.actions { display: flex; gap: 8px; }
+.actions #export { flex: 1; }
+#status { margin: 0; font-size: 13px; color: #ffe9a8; min-height: 1.2em; }
+.fineprint { margin: 0; font-size: 11px; color: #9d86bd; }
+.preview { flex: 1; min-width: 0; position: sticky; top: 24px; }
+.preview canvas { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 12px 44px rgba(0, 0, 0, 0.55); }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .preview { position: static; }
+body.shot-cover canvas { width: 100vw; height: 100vh; object-fit: contain; border-radius: 0; box-shadow: none; background: #160a2e; }
+@media (max-width: 900px) { .app { flex-direction: column; } .controls { width: 100%; } .preview { position: static; width: 100%; } }
